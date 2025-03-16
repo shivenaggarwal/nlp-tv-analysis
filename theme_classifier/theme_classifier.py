@@ -68,6 +68,7 @@ class ThemeClassifier():
 
         # load Dataset
         df = load_subtitles_dataset(dtaset_path)
+        df = df.head(2)
 
         # Run Inference
         output_themes = df['script'].apply(self.get_themes_inference)
