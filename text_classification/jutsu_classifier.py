@@ -36,7 +36,7 @@ class JutsuClassifier():
         self.model_name = model_name
         self.test_size = test_size
         self.num_labels = num_labels
-        self.device = 'cuda' if torch.cuda.is_available() else 'cpu'
+        self.device = 'cuda' if torch.cuda.is_available() else 'mps'
 
         self.huggingface_token = huggingface_token
         if self.huggingface_token is not None:
